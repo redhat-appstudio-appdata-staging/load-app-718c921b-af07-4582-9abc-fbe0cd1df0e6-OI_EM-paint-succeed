@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-km0a
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-km0a
+    app.kubernetes.io/part-of: load-app-718c921b-af07-4582-9abc-fbe0cd1df0e6
+  name: devfile-sample-km0a
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-km0a
+status:
+  loadBalancer: {}
